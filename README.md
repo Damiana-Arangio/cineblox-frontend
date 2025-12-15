@@ -1,109 +1,74 @@
-<h1 align="center"> Web App React </h1>
-<h4 align="center">Ora è il momento di prepararci al frontend della nostra Web App!</h4>
+<p align="center">
+  <img src="./public/imgs/boolean-logo.png" alt="Boolean Logo" width="35">
+</p>
 
-## Consegna - I PARTE
+<h1 align="center">Web App React</h1>
 
-MILESTONE 0 
-- Ragionare e preparare uno schemino per impostare la struttura del lavoro in maniera da sfruttare la riutailizzabilità dei componenti React e le loro props.,
+Frontend di una web application full-stack per la gestione e consultazione di film, sviluppato come Single Page Application con React.
 
-MILESTONE 1
-- Mettiamo su un nuovo progetto React aiutandoci con Vite,
-- Ripuliamo come sempre l’app da file e codice di esempio non necessari,
-- Installiamo il necessario: React Router, Axios e Bootstrap (se volete utilizzarlo),
+Backend di riferimento:  
+https://github.com/Damiana-Arangio/webapp-express.git
 
-MILESTONE 2
-- Creiamo un layout di base per la nostra applicazione ed impostiamo le rotte per le diverse pagine.,
-- Creiamo 2 pagine:
-- La home, in cui mostreremo la lista dei film
-- La pagina di dettaglio di un singolo film,
+---
 
+## Descrizione del progetto
 
-MILESTONE 3
-- Configuriamo l’app di backend (repo webapp-express) a ricevere chiamate dalla nostra applicazione React, installando e impostando il middleware CORS.
-- Proviamo quindi ad effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei film
+L’applicazione consente di:
+- visualizzare una lista di film
+- consultare il dettaglio di un singolo film
+- leggere e inserire recensioni
+- gestire stati di caricamento e navigazione
 
-MILESTONE 4
-- In ultimo, effettuiamo una chiamata AJAX dalla pagina di dettaglio per ottenere il dettaglio di un singolo film, comprese le sue recensioni
+Il frontend comunica con un backend Express tramite chiamate AJAX ed è strutturato per favorire la riutilizzabilità dei componenti.
 
-## Bonus
-Curare l’aspetto estetico dell'applicazione.
-Se il resto è a dir poco perfetto e tutto compreso potrei aggiungere magari qualche features (es. 404 e media voti)
-<br>
-<br>
-<br>
+---
 
-## Consegna - II PARTE
-Miglioriamo l’esperienza dell’utente inserendo 
+## Funzionalità principali
 
-MILESTONE 1 (BACKEND)
-- Predisponiamo un’API per salvare nel database una nuova recensione legata ad un film
-- Testiamola su postman e verifichiamo che nel DB venga effettivamente inserita una nuova recensione
+- Visualizzazione elenco film
+- Pagina di dettaglio con informazioni e recensioni
+- Inserimento di nuove recensioni tramite form
+- Inserimento di nuovi film
+- Gestione del routing con React Router
+- Loader globale tramite Context
+- Pagina 404 per rotte non valide
 
-MILESTONE 2 (FRONTEND)
-- Creiamo un componente che contenga il form per le recensioni
-- Inseriamo questo componente nella pagina di dettaglio del film
-- All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre
+---
 
-## BONUS:
-Come sempre curiamo il layout e il CSS
-<br>
-<br>
-<br>
+## Architettura frontend
 
-## Consegna - III PARTE
-Concludiamo migliorando l’esperienza sulla nostra SPA, inserendo un loader.
+- Layout condiviso
+- Componenti riutilizzabili
+- Gestione dello stato locale e globale
+- Comunicazione con API REST tramite Axios
 
-- Creiamo un componente loader
-- Questo componente deve poter apparire su qualunque pagina della nostra app.
-- Creiamo e sfruttiamo un Context per dare la possibilità ad ogni componente di attivare o disattivare il loader sulla propria pagina
+---
 
-## BONUS:
-Personalizziamo l’aspetto della nostra app col CSS;
-altre features come magari inserimento nuovo film.
-<br>
-<br>
-<br>
+## Anteprime
 
-
-## Anteprima Schema Web App React
+### Schema applicazione
 ![Schema](./public/imgs/Schema-App.png)
 
-## Anteprima HomePage
+### Home Page
 ![Homepage](./public/imgs/Screenshot-Movies.png)
-<br>
-<br>
-<br>
 
-## Anteprima Pagina del dettaglio (MovieDetailsPage)
+### Dettaglio film
 ![MovieDetailsPage](./public/imgs/Screenshot-MovieDetailsPage.png)
-<br>
-<br>
-<br>
 
-## Form Nuova Recensione (MovieDetailsPage)
-![MovieDetailsPage](./public/imgs/Screenshot-Add-NewReview.png)
-<br>
-<br>
-<br>
+### Inserimento nuova recensione
+![AddReview](./public/imgs/Screenshot-Add-NewReview.png)
 
-## Form Nuovo Film (NewMoviePage)
-![NewMoviePage](./public/imgs/Screenshot-Add-NewMovie.png)
-<br>
-<br>
-<br>
+### Inserimento nuovo film
+![NewMovie](./public/imgs/Screenshot-Add-NewMovie.png)
 
-##  Anteprima Pagina NotFound (404)
-![NotFoundPage](./public/imgs/Screenshot-NotFoundPage.png)
-<br>
-<br>
-<br>
+### Pagina 404
+![NotFound](./public/imgs/Screenshot-NotFoundPage.png)
 
+---
 
 ## Tecnologie utilizzate
 
 - React + Vite
 - React Router DOM
 - Axios
-<br>
-<br>
-<br>
+- Bootstrap / CSS
