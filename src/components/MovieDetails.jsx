@@ -143,9 +143,17 @@ function MovieDetails() {
         axios.get(url)
             .then(risApi => setMovie(risApi.data))
             .catch(errApi => {
-                console.log(errApi)
-                if (errApi.status === 404) {
-                    navigate('/404');                   // Redirect alla pagina NotFoundPage 
+
+                // Gestione errore 400 -> ID non valido es. movies/ciao
+                if (errApi.response?.status === 400) {
+                    console.log(errApi.response.data.errors[0].msg);
+                    navigate('/404');
+                }
+
+                // Gestione errore 404 -> risorsa non trovata (id numerico non esistente)
+                else if (errApi.response?.status === 404) {
+                    console.log(errApi.response.data.error);
+                    navigate('/404');
                 }
             })
             .finally(() => setIsLoading(false));        // Disattiva il loader in ogni caso (successo o errore)

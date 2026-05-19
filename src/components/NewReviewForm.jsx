@@ -13,7 +13,7 @@ function NewReviewForm( {idMovieDetails, reloadReviews} ) {
     const initialValues = {
         text: "",
         vote: 1,
-        name: "Anonymous"
+        name: ""
     }
 
     /* Endpoint Api */
@@ -113,11 +113,24 @@ function NewReviewForm( {idMovieDetails, reloadReviews} ) {
             headers: { 'Content-Type': 'application/json'}
         })
 
-        .then(() => {
+        .then(response => {
             setFormData(initialValues)      // Setto form ai valori iniziali
             reloadReviews();                // Aggiorno la lista delle recensioni nel componente MovieDetails
+            console.log(response.data.message);
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+            const status = error.response?.status;
+            const data = error.response?.data;
+
+            if (status === 400) {
+                data.errors.forEach(error => {
+                    console.log(error.msg);
+                });
+            }
+            else if (status === 500) {
+                console.log(data.error); // Inserimento recensione fallito!
+            }
+        })
     }
 
 }

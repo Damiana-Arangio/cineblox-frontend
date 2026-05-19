@@ -64,7 +64,7 @@ function NewMoviePage() {
                             className="form-control"
                             value={formData.title}
                             onChange={handleFormData}
-                            required
+                            // required
                         />
                     </div>
 
@@ -78,7 +78,7 @@ function NewMoviePage() {
                             className="form-control"
                             value={formData.director}
                             onChange={handleFormData}
-                            required
+                            // required
                         />
                     </div>
 
@@ -92,7 +92,7 @@ function NewMoviePage() {
                             rows="3"
                             value={formData.abstract}
                             onChange={handleFormData}
-                            required
+                            // required
                         />
                     </div>
 
@@ -105,7 +105,7 @@ function NewMoviePage() {
                             id="image"
                             className="form-control"
                             onChange={handleFormData}
-                            required
+                            // required
                         />
                     </div>
 
@@ -130,7 +130,7 @@ function NewMoviePage() {
         if (e.target.name === "image") {
             setFormData({
                 ...formData,
-                image: e.target.files[0]  // salvo l’oggetto File
+                image: e.target.files[0]            // salvo l’oggetto File
             });
         } else {
             setFormData({
@@ -142,14 +142,21 @@ function NewMoviePage() {
 
     /* Funzione che gestisce l'invio del form */
     function handleSubmit(e) {
-        e.preventDefault();         // Blocca refresh automatico del form
+        e.preventDefault();                         // Blocca refresh automatico del form
 
         axios.post(apiUrl, formData, {
             headers: { 'Content-Type': 'multipart/form-data' }
         })
 
-            .then(() => navigate('/movies'))        // Redirect alla home
-            .catch(error => console.log(error));
+            .then(response => {
+                console.log(response.data.message); 
+                navigate('/movies');                // Redirect alla home
+            })
+            .catch(error => {
+                error.response.data.errors.forEach(error => {
+                    console.log(error.msg);
+                })
+            })
     }
 
 }
