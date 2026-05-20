@@ -12,13 +12,15 @@ function MovieCard(props) {
     ***************/
     return (
 
-        <div className="col-4 mb-5">
-            <div className="card movie-card p-2" style={{width: "20rem"}}>
-                <img src={movie.image} className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">{movie.title}</h5>
-                    <address className="text-grey"> {movie.director} </address>
-                    <p className="card-text"> {movie.abstract} </p>
+        <div className="container-single-card">
+            <div className="card movie-card">
+                <img src={movie.image} className="movie-card-img" alt={movie.title}/>
+                
+                <div className="card-body movie-card-body">
+                    <h5 className="card-title text-white">{movie.title}</h5>
+                    <address className="text-muted-blue"> {movie.director} </address>
+                    <h6 className="text-primary">{movie.genre}</h6>
+                    <p className="card-text movie-card-text"> {movie.abstract} </p>
                     <Link to={`/movies/${movie.id}`} className="btn see-more-btn">See more</Link>
                 </div>
             </div>
