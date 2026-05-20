@@ -1,27 +1,41 @@
 /************************** Componente Header ****************************/
 
-import { Link } from "react-router-dom";      /* Import componente Link da React Router */
+import { Link, NavLink } from "react-router-dom";      /* Import componente Link da React Router */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
     return(
 
-        <nav className="container d-flex justify-content-between pe-5">
+        <nav className="container nav-header">
 
             {/* Logo + Titolo */}
-            <Link className="navbar-brand fs-1 fw-bold d-flex flex-row align-items-center" to="/movies">
-                <FontAwesomeIcon icon={faFilm} className="logo-icon me-4" />            
-                <h2 className="text-white">Movies App</h2>    
+            <Link className="navbar-brand d-flex align-items-center" to="/movies">
+                <img src="/src/assets/imgs/logo-cineblox.png" alt="Cineblox logo" className="logo-img" />
+ 
+                <div>
+                    <h1 className="text-sky logo-title">D.A. <span className="text-sky-light"> Cineblox</span></h1>
+                    <h6 className="logo-subtitle"> DISCOVER. SHARE . REVIEW </h6>  
+                </div>         
             </Link>
 
-            {/* Bottone per aggiungere un nuovo film */}
-            <Link to="/movies/create">
-                <button className="add-movie-btn mt-2 me-5"> 
-                    Add Movie
-                </button>
-                
-            </Link>     
+            {/* Link centrali */}
+                <ul className="links-header">
+                    <li>
+                        <NavLink to="/about" className="link-header">About</NavLink >
+                    </li>
+
+                    <li>
+                    <NavLink to="/movies" end className="link-header">All Movies</NavLink >
+                    </li>
+
+                    <li>
+                        <NavLink to="/movies/create" className="link-header"> Add Movie </NavLink >
+                    </li>
+                </ul>
+
+            {/* Icone da aggiungere */}
+                <p className="music-icon">icone</p> 
         </nav>
     )
 }

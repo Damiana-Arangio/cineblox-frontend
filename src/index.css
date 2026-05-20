@@ -1,13 +1,23 @@
 /**********************
     REGOLE GENERALI
 ***********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #0A101B;
+    background-color: #000610;
     color: #ffffff;
 }
 
 button {
     box-shadow: #fffefe;
+}
+
+ul {
+    list-style-type: none;
 }
 
 /**************************
@@ -21,58 +31,133 @@ button {
     color: #c1c1c1;
 }
 
+.text-muted-blue {
+    color: #6B788A;
+}
+
+.text-sky {
+    color: #5AA3EC;
+}
+
+.text-sky-light {
+    color: #BFECFE;
+}
+
+/**************
+    LAYOUT
+***************/
+.container-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 /*************
     HEADER
 **************/
 .header-page {
-    background-color: #151E2E;
-    vertical-align: middle;
+    height: 8%;    
 }
 
-.logo-icon{
-    font-size: 32px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(60, 131, 246, 0.4);
-    color: #3c83f6;
+.nav-header {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #8F9A9D;
+    border-bottom: 1.3px solid #041F39;
 }
 
-.add-movie-btn {
-    background: #3c83f6;
-    color: #fff;
-    padding: 10px 22px;
-    border-radius: 14px;
-    border: none;
-    font-weight: 500;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(60, 131, 246, 0.35);
-    transition: all 0.2s ease-in-out;
+.logo-img {
+    width: 60px;
 }
 
-.add-movie-btn:hover {
-    background: #1e6ff5;
-    box-shadow: 0 6px 15px rgba(60, 131, 246, 0.45);
-    transform: translateY(-1px);
+.logo-title {
+    font-size: 1.32rem;
+    margin: 3px;
 }
 
-.add-movie-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 8px rgba(60, 131, 246, 0.3);
+.logo-subtitle {
+    font-size: 0.7rem;
 }
 
+.links-header {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin-top: 15px;
+}
 
-/*************
+.link-header {
+    text-decoration: none;
+    position: relative;
+    color: #8F9A9D;
+}
+
+.link-header:hover {
+    text-decoration: none;
+    color: #0D6EFD;
+}
+
+.link-header.active {
+    color: #0D6EFD;
+}
+
+.link-header.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -23px;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 2px;
+    background-color: #0779F6;
+    box-shadow: 0 0 12px rgba(7, 121, 246, 0.8);
+}
+
+.music-icon{
+    margin-top: 15px;
+}
+
+/************
     MAIN
-**************/
+************/
+
+/* Contenuti main */
+.main-content {
+    flex-grow: 1;
+}
+
+/* Container lista card */
+.container-card {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+    /* Debug */
+    background-color: rgb(0, 255, 30);
+
+}
+
+.container-single-card {
+
+    min-width: 230px;
+    max-height: 350px;
+
+    /* Debug */
+    background-color: red;
+}
 
 /* MovieCard */
 .movie-card {
-    background-color: #1D283A;
+    background-color: #030B15;
     color: #dfe3f0;
+    border: 1px solid #0F2D43;
     border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    max-width: 230px;
+    max-height: 500px;
 }
 
 .see-more-btn {
@@ -127,4 +212,14 @@ button {
 .movie-details-wrapper {
     width: 100%;
     min-width: 1200px;
+}
+
+/*************
+    FOOTER
+**************/
+.footer-page {
+    height: 15%;
+
+    /* Debug */
+    background-color: rgb(160, 30, 147);
 }
