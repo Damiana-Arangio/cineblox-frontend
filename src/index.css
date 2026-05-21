@@ -52,6 +52,20 @@ ul {
     transform: translateY(-1px);
 }
 
+/* Simboli */
+.obligatory {
+    font-size: 1.2rem;
+    color: var(--color-primary-blue);
+}
+
+/* Errori form */
+.form-error {
+    margin-top: 6px;
+    margin-bottom: 0;
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
 /**************
     LAYOUT
 ***************/
@@ -277,6 +291,44 @@ ul {
     font-size: 1rem;
     padding-left: 5px;
     color: var(--color-primary-blue);
+}
+
+/** NewMoviePage */
+.title-new-movie {
+    color: var(--color-primary-blue);
+}
+.form-control-dark {
+    color: var(--color-text-white);
+    background-color: #08111f;
+    border: 1px solid var(--color-border-main);
+}
+
+.form-control-dark:focus {
+    color: var(--color-text-white);
+    background-color: #08111f;
+    border-color: var(--color-primary-blue);
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.35);
+}
+
+.form-control-dark::placeholder {
+    color: var(--color-text-muted-blue);
+}
+
+.plan-icon {
+    margin-right: 10px;
+    color: var(--color-primary-blue);
+}
+
+input[type="file"].form-control-dark::file-selector-button {
+    color: var(--color-primary-blue);
+    background-color: #08111f;
+    padding: 8px 14px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+input[type="file"].form-control-dark:hover {
+    border-color: var(--color-primary-blue);
 }
 
 /** LOADING */
