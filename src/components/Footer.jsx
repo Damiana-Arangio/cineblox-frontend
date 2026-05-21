@@ -19,10 +19,22 @@ function Footer() {
                 {/* Link Contatti */}
                 <div className="footer-contacts">
                     <h6>Contacts</h6>
+
+                    {/* Github */}
                     <div className="footer-icons">
-                        <FontAwesomeIcon icon={faGithub} />
-                        <FontAwesomeIcon icon={faLinkedin} />
-                        <FontAwesomeIcon icon={faEnvelope} />
+                        <a href="https://github.com/Damiana-Arangio" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faGithub} />
+                        </a>
+
+                        {/* Linkedin */}
+                        <a href="https://www.linkedin.com/in/damiana-arangio-55b74b349/" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin} />
+                        </a>
+
+                        {/* Email */}
+                        <a href="mailto:arangio.damiana@gmail.com">
+                            <FontAwesomeIcon icon={faEnvelope} />
+                        </a>
                     </div>
                 </div>
 
