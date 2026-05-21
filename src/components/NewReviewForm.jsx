@@ -1,7 +1,6 @@
-/************************** Componente NewReviewForm ****************************/
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
 
 function NewReviewForm( {idMovieDetails, reloadReviews} ) {
 
@@ -87,9 +86,7 @@ function NewReviewForm( {idMovieDetails, reloadReviews} ) {
                 </div>
 
                 {/* Bottone Invio */}
-                <footer>
-                    <button type="submit" className="btn btn-primary mt-3"> Submit </button>
-                </footer>
+                    <button type="submit" className="btn-main mt-3"> Submit </button>
             </form>
         </>
     )
@@ -132,7 +129,6 @@ function NewReviewForm( {idMovieDetails, reloadReviews} ) {
             }
         })
     }
-
 }
 
 export default NewReviewForm;

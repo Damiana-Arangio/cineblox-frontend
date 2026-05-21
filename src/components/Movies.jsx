@@ -1,9 +1,7 @@
-/************************** Componente Movies ****************************/
-
 import axios from "axios";
 import MovieCard from "./MovieCard";
 import { useState, useEffect } from "react";
-import { useGlobalContext } from '../context/GlobalContext.jsx'  // Import Hook personalizzato per il contesto
+import { useGlobalContext } from '../context/GlobalContext.jsx'             // Import Hook personalizzato per il contesto
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -41,14 +39,14 @@ function Movies() {
     return (
 
         <>
-            <div className="container my-4">
+            <div className="container header-main my-4">
 
                 {/* Titolo + sottotitolo */}
-                <h1 className="text-white"> All <span className="text-primary"> Movies </span> </h1>
-                <h6 className="text-grey text-muted-blue"> Explore the world of D.A. Cinebox </h6>
+                <h1> All <span> Movies </span> </h1>
+                <h6> Explore the world of D.A. Cinebox </h6>
 
                 {/* Contenitore lista card */}
-                <div className=" py-2 my-3 container-card">
+                <div className="container-card py-2 my-3">
                     {currentMovies.map((movie) => (
                         <MovieCard
                             key={movie.id}
@@ -83,7 +81,6 @@ function Movies() {
                     </button>
 
                 </div>
-
             </div>
         </>
     )

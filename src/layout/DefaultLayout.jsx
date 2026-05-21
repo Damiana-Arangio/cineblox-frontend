@@ -1,14 +1,17 @@
-import {Outlet} from 'react-router-dom';
-import { useGlobalContext } from '../context/GlobalContext.jsx'  // Import Hook personalizzato per il contesto
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Loader from '../components/Loader';                  
+import Loader from '../components/Loader'
+import { Outlet } from 'react-router-dom';
+import { useGlobalContext } from '../context/GlobalContext.jsx'  // Import Hook personalizzato per il contesto             
 
 function DefaultLayout() {
 
     // Destructuring della variabile isLoading dal GlobalCoontext
     const { isLoading } = useGlobalContext();
 
+    /****************
+        RENDERING
+    ****************/    
     return(
 
         <div className="container-layout">
@@ -26,8 +29,7 @@ function DefaultLayout() {
 
             {isLoading && <Loader />}   {/* Se la variabile di stato "isLoading è true mostro il componente Loader" */}
         </div>       
-    )
-    
+    )   
 }
 
 export default DefaultLayout;

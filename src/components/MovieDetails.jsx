@@ -1,5 +1,3 @@
-/************************** Componente Movie Details ****************************/
-
 import axios from 'axios';
 import ReviewCard from './ReviewCard';
 import NewReviewForm from './NewReviewForm';
@@ -10,7 +8,6 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useGlobalContext } from '../context/GlobalContext.jsx'  // Import Hook personalizzato per il contesto
-
 
 function MovieDetails() {
 
@@ -111,20 +108,14 @@ function MovieDetails() {
                     </div>
                 </section>
             </div>
-            
-
 
             {/* Bottone che riporta alla Home */}
-            <footer className='m-5'>
-                <div className='text-center mt-3'>
-                    <Link className="btn btn-outline-primary" to="/movies/"> 
+                <div className='text-center m-5'>
+                    <Link className="btn-main" to="/movies/"> 
                         <FontAwesomeIcon icon={faArrowLeft} className='px-2'/>
                         Back to Home 
                     </Link>
                 </div>
-            </footer>
-        
-
         </>
     )
 

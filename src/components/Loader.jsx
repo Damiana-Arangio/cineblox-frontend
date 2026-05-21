@@ -1,11 +1,12 @@
-/***************************************** LOADER **********************************************/
-
 
 function Loader() {
+
+    /***************
+        RENDERING
+    ***************/
     return (
         <div className="overlay">
-            <div className="spinner-border text-primary" role="status">
-            </div>
+            <div className="spinner-border" role="status"></div>
         </div>
     )
 }

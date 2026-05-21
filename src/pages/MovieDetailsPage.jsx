@@ -1,8 +1,10 @@
-/* Pagina dettagli di un film che mostra il componente MovieDetails */
-
 import MovieDetails from '../components/MovieDetails.jsx'
 
+/****************
+    RENDERING
+****************/
 function MovieDetailsPage() {
+    
     return (
         <MovieDetails/>
     )

@@ -1,8 +1,10 @@
-/* Homepage che mostra il componente Movies */
-
 import Movies from '../components/Movies.jsx'
 
+/****************
+    RENDERING
+****************/
 function HomePage() {
+    
     return (
         <Movies/>
     )

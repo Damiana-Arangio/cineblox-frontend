@@ -1,9 +1,8 @@
-/************************************* NewMoviePage  **************************************/
-
+import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from '../context/GlobalContext.jsx'  // Import Hook personalizzato per il contesto
-import axios from "axios";
+
 
 function NewMoviePage() {
 
@@ -26,7 +25,6 @@ function NewMoviePage() {
 
     /* Hook di Stato */
     const [formData, setFormData] = useState(initialValues);    // Variabile di stato che memorizza i dati del form e permette di aggiornarli dinamicamente
-
 
     /* Hook di Navigazione */
     const navigate = useNavigate();                             // Hook utilizzato per reindirizzare l'utente alla pagina HomePage
@@ -110,9 +108,7 @@ function NewMoviePage() {
                     </div>
 
                     {/* Bottone */}
-                    <footer>
-                        <button type="submit" className="btn btn-primary mt-3">Submit</button>
-                    </footer>
+                        <button type="submit" className="btn-main mt-3">Submit</button>
                 </form>
                 </div>
             </section>
