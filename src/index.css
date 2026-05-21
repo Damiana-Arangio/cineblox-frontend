@@ -128,8 +128,18 @@ ul {
     box-shadow: 0 0 18px rgba(var(--color-primary-blue-rgb), 0.8);
 }
 
-.music-icon{
-    margin-top: 15px;
+.music-btn {
+    padding: 0 14px;
+    color: var(--color-text-muted);
+    background: rgba(13, 110, 253, 0.08);
+    border: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.music-btn:hover {
+    color: var(--color-text-white);
+    background: rgba(13, 110, 253, 0.16);
 }
 
 /************
@@ -274,7 +284,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     position: fixed;
     top: 0;
     left: 0;

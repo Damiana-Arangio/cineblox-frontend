@@ -1,8 +1,15 @@
 import { Link, NavLink } from "react-router-dom";      /* Import componente Link da React Router */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import { useRef, useState } from "react";
 
 function Header() {
+
+    /***********
+        HOOKS
+    ************/
+    const audioRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     /***************
         RENDERING
@@ -11,7 +18,7 @@ function Header() {
 
         <nav className="container nav-header">
 
-            {/* Link: Logo + Titolo */}
+            {/* Logo e titolo */}
             <Link className="navbar-brand d-flex align-items-center" to="/movies">
                 <img src="/src/assets/imgs/logo-cineblox.png" alt="Cineblox logo" className="logo-img" />
                 <div>
@@ -20,7 +27,7 @@ function Header() {
                 </div>         
             </Link>
 
-            {/* Link: About - All Movies - Add Movie */}
+            {/* Menu di navigazione */}
                 <ul className="links-header">
 
                     <li>
@@ -36,10 +43,28 @@ function Header() {
                     </li>
                 </ul>
 
-            {/* Icone da aggiungere */}
-                <p className="music-icon">icone</p> 
+            {/* Audio di sottofondo */}
+            <audio ref={audioRef} src="/audio/music.mp3" loop />
+
+            <button className="music-btn" onClick={toggleMusic}>
+                {isPlaying ? "❚❚ Now Playing" : "♪ Jazz Lounge"}
+            </button>
         </nav>
     )
+
+    /***************
+        FUNZIONI
+    ****************/
+    /* Avvia o mette in pausa la musica di sottofondo */
+    function toggleMusic() {
+        if (isPlaying) {
+            audioRef.current.pause();
+        } else {
+            audioRef.current.volume = 0.01;
+            audioRef.current.play();
+        }
+        setIsPlaying(!isPlaying);
+    }
 }
 
 export default Header;
