@@ -47,7 +47,7 @@ function Header() {
             <audio ref={audioRef} src="/audio/music.mp3" loop />
 
             <button className="music-btn" onClick={toggleMusic}>
-                {isPlaying ? "❚❚ Now Playing" : "♪ Jazz Lounge"}
+                {isPlaying ? "❚❚ Now Playing" : "♪ Cine Lounge"}
             </button>
         </nav>
     )
