@@ -92,6 +92,7 @@ ul {
 
 .logo-subtitle {
     font-size: 0.7rem;
+    color: var(--color-text-muted-blue);
 }
 
 .links-header {
@@ -234,8 +235,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
-    margin-top: 30px;
+    gap: 23px;
 }
 
 .arrow-scroll-movies {
@@ -310,8 +310,32 @@ ul {
     FOOTER
 **************/
 .footer-page {
-    height: 15%;
+    height: 15%
+}
 
-    /* Debug */
-    background-color: rgb(160, 30, 147);
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted-blue);
+}
+.footer-bottom {
+    font-size: 0.80rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: var(--color-text-muted-blue);
+    border-top: 1.3px solid var(--color-border);
+}
+
+.footer-contacts h6 {
+    color: var(--color-text-sky-light);
+}
+.footer-icons *{
+    color: var(--color-primary-blue);
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-right: 10px;
 }
