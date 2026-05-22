@@ -5,7 +5,7 @@ import MoviesPage from './pages/MoviesPage';                       // Import pag
 import MovieDetailsPage from './pages/MovieDetailsPage';           // Import Pagina dettagli film
 import NotFoundPage from './pages/NotFoundPage';                   // Import Pagina Not Found
 import NewMoviePage from './pages/NewMoviePage'                   // Import pagina nuovo film
-import { GlobalProvider } from './context/GlobalContext';
+import { LoaderProvider } from './context/LoaderContext';
 
 
 
@@ -17,7 +17,7 @@ function App() {
       {/*****************************
               PROVIDER GLOBALE
       *******************************/}
-      <GlobalProvider>  {/* Gestisce il Loader in tutta l'app tramite Context */}
+      <LoaderProvider>  {/* Gestisce il Loader in tutta l'app tramite Context */}
 
         {/*****************************
                 GESTIONE DELLE ROTTE
@@ -43,7 +43,7 @@ function App() {
           </Routes>
         </BrowserRouter>
 
-      </GlobalProvider>
+      </LoaderProvider>
     </>
   )
 }

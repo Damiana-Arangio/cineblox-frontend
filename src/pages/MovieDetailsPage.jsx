@@ -1,13 +1,13 @@
 import axios from 'axios';
 import ReviewCard from '../components/ReviewCard.jsx';
 import NewReviewForm from '../components/NewReviewForm.jsx';
+import useLoaderContext from "../hooks/useLoaderContext";  // Import Hook personalizzato per il contesto
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { useGlobalContext } from '../context/GlobalContext.jsx'  // Import Hook personalizzato per il contesto
 
 function MovieDetails() {
 
@@ -30,7 +30,7 @@ function MovieDetails() {
     const navigate = useNavigate();                 // Hook utilizzato per reindirizzare l'utente alla pagina NotFoundPage in caso di di errore 404 nella risposta API
 
     /* Hook di Contesto */
-    const { setIsLoading } = useGlobalContext();    /* Destructuring della funzione setIsLoading dal GlobalContext
+    const { setIsLoading } = useLoaderContext();    /* Destructuring della funzione setIsLoading dal LoaderContext
                                                         (usata per attivare/disattivare il loader durante le chiamate API) */
     /**************
         COSTANTI

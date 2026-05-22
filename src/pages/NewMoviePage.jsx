@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useGlobalContext } from '../context/GlobalContext.jsx'  // Import Hook personalizzato per il contesto
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
@@ -28,12 +27,10 @@ function NewMoviePage() {
     /* Hook di Stato */
     const [formData, setFormData] = useState(initialValues);    // Variabile di stato che memorizza i dati del form e permette di aggiornarli dinamicamente
     const [errors, setErrors] = useState({});                   // Variabile di stato che memorizza gli errori di validazione
+    
     /* Hook di Navigazione */
     const navigate = useNavigate();                             // Hook utilizzato per reindirizzare l'utente alla pagina HomePage
 
-    /* Hook di Contesto */
-    const { setIsLoading } = useGlobalContext();                /* Destructuring della funzione setIsLoading dal GlobalContext
-                                                                   (usata per attivare/disattivare il loader durante le chiamate API) */
     /***************
         RENDERING
     ****************/

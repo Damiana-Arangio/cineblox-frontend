@@ -1,7 +1,7 @@
 import axios from "axios";
 import MovieCard from "../components/MovieCard.jsx";
+import useLoaderContext from "../hooks/useLoaderContext";  // Import Hook personalizzato per il contesto
 import { useState, useEffect } from "react";
-import { useGlobalContext } from '../context/GlobalContext.jsx'             // Import Hook personalizzato per il contesto
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,7 +21,7 @@ function Movies() {
     }, []);
 
     /* Hook di Contesto */
-    const { setIsLoading } = useGlobalContext();                            /*  Destructuring della funzione setIsLoading dal GlobalContext
+    const { setIsLoading } = useLoaderContext();                            /*  Destructuring della funzione setIsLoading dal LoaderContext
                                                                                 (usata per attivare/disattivare il loader durante le chiamate API) */
 
     /**************************
