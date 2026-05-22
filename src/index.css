@@ -331,6 +331,50 @@ input[type="file"].form-control-dark:hover {
     border-color: var(--color-primary-blue);
 }
 
+/** AboutPage */
+.about-page {
+    min-height: calc(100vh - 8vh - 15vh);
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg-main);
+    background-image: url('/src/assets/imgs/sfondo-aboutpage.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 88%;
+}
+
+.about-content {
+    max-width: 780px;
+    margin-left: 40px;
+}
+
+.about-title {
+    margin-bottom: 20px;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--color-text-white);
+}
+
+.about-title span {
+    color: var(--color-primary-blue);
+}
+
+.about-subtitle {
+    max-width: 760px;
+    margin-bottom: 28px;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-text-sky-light);
+}
+
+.about-text {
+    max-width: 720px;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-text-muted-blue);
+}
+
 /** LOADING */
 .overlay {
     display: flex;
