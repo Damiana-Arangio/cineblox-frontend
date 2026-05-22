@@ -1,5 +1,5 @@
 import axios from "axios";
-import MovieCard from "./MovieCard";
+import MovieCard from "../components/MovieCard.jsx";
 import { useState, useEffect } from "react";
 import { useGlobalContext } from '../context/GlobalContext.jsx'             // Import Hook personalizzato per il contesto
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

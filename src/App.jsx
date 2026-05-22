@@ -1,11 +1,12 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';   // Import libreria di Routing
 import DefaultLayout from './layout/DefaultLayout';                // Import Layout principale pagina
-import HomePage from './pages/HomePage';                           // Import Pagina Home
+import MoviesPage from './pages/MoviesPage';                       // Import pagina lista film
 import MovieDetailsPage from './pages/MovieDetailsPage';           // Import Pagina dettagli film
 import NotFoundPage from './pages/NotFoundPage';                   // Import Pagina Not Found
-import NewMoviePage from './pages/NewMoviePage'                // Import pagina nuovo film
+import NewMoviePage from './pages/NewMoviePage'                   // Import pagina nuovo film
 import { GlobalProvider } from './context/GlobalContext';
+
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
 
               {/* Rotte figlie - mostrate dentro <Outlet/> */}
               <Route path='/movies'>
-                <Route index element={<HomePage />} />
+                <Route index element={<MoviesPage />} />
                 <Route path=":id" element={<MovieDetailsPage />} />
                 <Route path="create" element={<NewMoviePage />} />
               </Route>
