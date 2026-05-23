@@ -102,9 +102,9 @@ function MovieDetails() {
                     {/* Form per aggiungere una nuova recensione */}
                     <div>
                         <NewReviewForm 
-                        idMovieDetails = {id}
-                        reloadReviews = {fetchMovie}
-                    />
+                            idMovieDetails = {id}
+                            reloadReviews = {fetchMovie}
+                        />
                     </div>
                 </section>
             </div>

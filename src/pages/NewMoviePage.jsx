@@ -106,7 +106,7 @@ function NewMoviePage() {
                         {errors.image && <p className="form-error">{errors.image}</p>}
                     </div>
 
-                    {/* Bottone */}
+                    {/* Bottone Invio */}
                         <button type="submit" className="btn-main mt-3">
                         <FontAwesomeIcon icon={faPaperPlane} className="plan-icon"/>
                         Submit Movie</button>
