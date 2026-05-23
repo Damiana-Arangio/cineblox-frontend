@@ -46,24 +46,25 @@ function MovieDetails() {
         <>
 
             {/* CONTENUTO PRINCIPALE FILM */}
-                <article className="m-5 py-3 d-flex justify-content-center">
-                    <div className="card border-0 " style={{ maxWidth: "600px" }}>
-                        <div className="row g-0 movie-card p-2">
+            <article className="movie-details-hero">
+                    <div className="movie-details-card">
 
-                        {/* Immagine */}
-                            <div className="col-md-4" >
-                            <img src={movie.image} className="img-fluid rounded-start px-2" alt={movie.title} />
-                        </div>
+                    {/* Immagine */}
+                    <img 
+                        src={movie.image} 
+                        className="movie-details-img" 
+                        alt={movie.title} 
+                    />
 
-                        {/* Titolo - Genere - Abstract */}
-                        <div className="col-md-8 px-2">
-                            <div className="card-body">
-                                <h3 className="card-title"> {movie.title} </h3>
-                                <p className="card-text"> {movie.abstract} </p>
-                                <small className=""> {movie.Genre} </small>
-                            </div>
-                        </div>
-
+                    {/* Titolo - Genere - Abstract */}
+                    <div className="movie-details-info">
+                        <h3> {movie.title} </h3>
+                        <p> {movie.abstract} </p>
+                        {movie.Genre && (
+                            <span className="movie-details-genre">
+                                {movie.Genre}
+                            </span>
+                        )}
                     </div>
                 </div>
             </article>
@@ -72,7 +73,7 @@ function MovieDetails() {
             <div className="container m-5 d-w-75 mx-auto">
                 <section>               
                     <header className="d-flex justify-content-between border-bottom pb-2 mb-4 py-3 ">
-                        <h3> Reviews </h3>
+                        <h3> Reviews</h3>
                         
                         {/* Stelle recensioni */}
                         <div className="d-flex align-items-center gap-2">
