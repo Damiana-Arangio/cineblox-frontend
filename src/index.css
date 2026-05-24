@@ -1,3 +1,5 @@
+/************************************** VERSIONE DESKTOP *************************************************************/
+
 /**********************
     REGOLE GENERALI
 ***********************/
@@ -531,11 +533,6 @@ input[type="file"].form-control-dark:hover {
     }
 }
 
-.movie-details-wrapper {
-    width: 100%;
-    min-width: 1200px;
-}
-
 /*************
     FOOTER
 **************/
@@ -568,4 +565,210 @@ input[type="file"].form-control-dark:hover {
     font-size: 1.5rem;
     margin-top: 5px;
     margin-right: 10px;
+}
+
+/************************************** VERSIONE TABLET *************************************************************/
+
+/* Tablet orizzontale / schermi medi */
+@media screen and (max-width: 992px) {
+
+    /* AboutPage */
+    .about-page {
+        background-image: none;
+    }
+}
+
+/* Tablet verticale */
+@media screen and (max-width: 768px) {
+
+    /* Movies */
+    .container-single-card {
+        width: calc((100% - 30px) / 3);
+    }
+
+    /* AboutPage */
+    .about-content {
+        max-width: 620px;
+        margin-left: 20px;
+    }
+
+    .about-title {
+        font-size: 2.6rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.5rem;
+    }
+
+    /* MovieDetailsPage */
+    .movie-details-card {
+        width: 80%;
+    }
+
+    /* ReviewCard */
+    .review-card {
+        gap: 25px;
+    }
+
+    .review-user {
+        min-width: 170px;
+    }
+}
+
+
+/************************************ VERSIONE SMARTPHONE ***********************************************************/
+@media screen and (max-width: 576px) {
+
+    /**********************
+        CLASSI RIUTILIZZABILI
+    ***********************/
+
+    /* Bottoni */
+    .btn-main {
+        padding: 7px 18px;
+        font-size: 0.85rem;
+    }
+
+    /*************
+        HEADER
+    **************/
+
+    .nav-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 15px;
+    }
+
+    .links-header {
+        gap: 14px;
+        margin-top: 0;
+        font-size: 0.9rem;
+    }
+
+    .music-btn {
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+    }
+
+    .link-header.active::after {
+        bottom: -6px;
+        width: 45px;
+    }
+
+    /************
+        MAIN
+    ************/
+
+    /** AboutPage */
+    .about-page {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+
+    .about-content {
+        margin-left: 0;
+    }
+
+    .about-title {
+        font-size: 2.3rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.35rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    /** Movies */
+    .container-card {
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+
+    .container-single-card {
+        width: 100%;
+    }
+
+    .movie-card {
+        height: auto;
+    }
+
+    .movie-card-img {
+        height: 230px;
+    }
+
+    .movie-card .card-body {
+        height: auto;
+    }
+
+    .container-scroll-movies {
+        margin-top: 25px;
+    }
+
+    /** MovieDetailsPage */
+    .movie-details-card {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+
+    .movie-details-img {
+        width: 180px;
+        height: 260px;
+    }
+
+    .movie-details-info {
+        padding-top: 0;
+    }
+
+    .stars {
+        font-size: 0.8rem;
+        padding-right: 3px;
+    }
+
+    /** Reviews */
+    section header h3 {
+        font-size: 1.2rem;
+    }
+
+    section header h5 {
+        margin-bottom: 0;
+        font-size: 0.95rem;
+    }
+
+    .review-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .review-user {
+        min-width: auto;
+    }
+
+    .review-text {
+        font-size: 0.9rem;
+    }
+
+    /*************
+        FOOTER
+    **************/
+    .footer-top {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer-contacts {
+        margin-bottom: 18px;
+    }
+
+    .footer-icons * {
+        margin-right: 8px;
+    }
 }
