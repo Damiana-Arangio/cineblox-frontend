@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";      /* Import componente Link da React Router */
+import { Link, NavLink } from "react-router-dom";      
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
 import { useRef, useState } from "react";
@@ -19,7 +19,7 @@ function Header() {
         <nav className="container nav-header">
 
             {/* Logo e titolo */}
-            <Link className="navbar-brand d-flex align-items-center" to="/movies">
+            <Link className="navbar-brand d-flex align-items-center" to="/about">
                 <img src="/src/assets/imgs/logo-cineblox.png" alt="Cineblox logo" className="logo-img" />
                 <div>
                     <h1 className="logo-title">D.A. <span> Cineblox</span></h1>
