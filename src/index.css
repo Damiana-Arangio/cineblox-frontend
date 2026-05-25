@@ -171,8 +171,8 @@ ul {
     background-color: var(--color-bg-main);
     background-image: url('/src/assets/imgs/sfondo-aboutpage.png');
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 88%;
+    background-position: center;
+    background-size: cover;
 }
 
 .about-content {
