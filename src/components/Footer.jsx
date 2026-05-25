@@ -32,7 +32,11 @@ function Footer() {
                         </a>
 
                         {/* Email */}
-                        <a href="mailto:arangio.damiana@gmail.com">
+                        <a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=arangio.damiana@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <FontAwesomeIcon icon={faEnvelope} />
                         </a>
                     </div>
