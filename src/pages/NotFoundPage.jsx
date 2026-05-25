@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function NotFoundPage() {
 
@@ -12,8 +10,7 @@ function NotFoundPage() {
             <h2 className="fs-1 pt-3">Page Not Found</h2>
             <p className="my-2">Sorry, but the page you are looking for does not exist.</p>
             <Link className="btn-main mt-3" to="/movies"> 
-                <FontAwesomeIcon icon={faArrowLeft} className='px-2' />
-                Back to Home
+                Discover Movies
             </Link>
         </div>
     );

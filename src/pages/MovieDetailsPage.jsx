@@ -114,7 +114,7 @@ function MovieDetails() {
                 <div className='text-center m-5'>
                     <Link className="btn-main" to="/movies/"> 
                         <FontAwesomeIcon icon={faArrowLeft} className='px-2'/>
-                        Back to Home 
+                        Back to All Movies
                     </Link>
                 </div>
         </>
