@@ -1,74 +1,94 @@
-<p align="center">
-  <img src="./public/imgs/boolean-logo.png" alt="Boolean Logo" width="35">
-</p>
+<h1 align="center">🎬 Cineblox - Frontend</h1>
 
-<h1 align="center">Web App React</h1>
+**Cineblox** è una Single Page Application (SPA) full-stack sviluppata con **React**, **Express** e **MySQL** pensata come una piattaforma dedicata al mondo del cinema, dove gli utenti possono consultare film per scoprirne i dettagli, leggere/condividere recensioni e contribuire con nuovi contenuti.
 
-Frontend di una web application full-stack per la gestione e consultazione di film, sviluppato come Single Page Application con React.
+Il frontend comunica con un backend REST tramite chiamate AJAX.
 
-Backend di riferimento:  
-https://github.com/Damiana-Arangio/webapp-express.git
+Backend repository:  
+[cineblox-backend ](https://github.com/Damiana-Arangio/webapp-express)
 
 ---
 
-## Descrizione del progetto
+# 🎥 Demo
 
-L’applicazione consente di:
-- visualizzare una lista di film
-- consultare il dettaglio di un singolo film
-- leggere e inserire recensioni
-- gestire stati di caricamento e navigazione
+<video controls autoplay muted width="800">
+  <source src="./public/demo.mp4" type="video/mp4">
+</video>
 
-Il frontend comunica con un backend Express tramite chiamate AJAX ed è strutturato per favorire la riutilizzabilità dei componenti.
+> ℹ️ La demo viene avviata automaticamente senza audio per permettere l’autoplay su GitHub.  
+> Per ascoltare anche l’audio, apri direttamente il file `public/demo.mp4`.
 
----
+## Responsive Design
 
-## Funzionalità principali
+### Movies Page - Desktop
+![Movies Page](./public/imgs/Screenshot-MoviesPage-Desktop.png)
 
-- Visualizzazione elenco film
-- Pagina di dettaglio con informazioni e recensioni
-- Inserimento di nuove recensioni tramite form
-- Inserimento di nuovi film
-- Gestione del routing con React Router
-- Loader globale tramite Context
-- Pagina 404 per rotte non valide
+### Movies Page - Tablet
+![Movies Tablet](./public/imgs/Screenshot-MoviesPage-Tablet.png)
 
----
+### Movies Page - Smartphone
+![Movies Smartphone](./public/imgs/Screenshot-MoviesPage-Mobile.png)
 
-## Architettura frontend
+# Funzionalità principali
 
-- Layout condiviso
-- Componenti riutilizzabili
-- Gestione dello stato locale e globale
-- Comunicazione con API REST tramite Axios
-
----
-
-## Anteprime
-
-### Schema applicazione
-![Schema](./public/imgs/Schema-App.png)
-
-### Home Page
-![Homepage](./public/imgs/Screenshot-Movies.png)
-
-### Dettaglio film
-![MovieDetailsPage](./public/imgs/Screenshot-MovieDetailsPage.png)
-
-### Inserimento nuova recensione
-![AddReview](./public/imgs/Screenshot-Add-NewReview.png)
-
-### Inserimento nuovo film
-![NewMovie](./public/imgs/Screenshot-Add-NewMovie.png)
-
-### Pagina 404
-![NotFound](./public/imgs/Screenshot-NotFoundPage.png)
+- Consultare una pagina introduttiva dell'applicazione
+- Visualizzare una lista di film
+- Scorrere i film tramite paginazione
+- Consultare il dettaglio di un film
+- Leggere le recensioni degli utenti
+- Inserire una nuova recensione
+- Aggiungere un nuovo film con immagine
+- Navigare tra le pagine tramite navbar
+- Avviare o interrompere la musica
 
 ---
 
-## Tecnologie utilizzate
+# Implementazione frontend
 
-- React + Vite
+- Context API per gestione loader globale
+- Gestione stato locale con Hooks
+- Utilizzo di useRef per gestione audio/music player
+- Routing dinamico con React Router DOM
+- Chiamate HTTP tramite Axios
+- Validazione dati lato frontend
+- Gestione errori API e pagina 404
+- Interfaccia responsive con approccio desktop first 
+
+---
+
+# Architettura applicazione
+Lo schema seguente mostra la struttura principale dell'applicazione: il Provider per la gestione del context globale, il layout principale organizzato tramite `Outlet` per il rendering dinamico delle pagine e i principali componenti utilizzati nelle diverse sezioni dell'app.
+
+<img src="./public/imgs/Schema-App.png" alt="Schema applicazione" width="700">
+
+
+# Stack
+
+Frontend
+- React
 - React Router DOM
 - Axios
-- Bootstrap / CSS
+- Context API
+- Bootstrap
+- CSS
+
+Backend
+- Node.js
+- Express.js
+- Multer
+- express-validator
+
+Database
+- MySQL
+
+---
+
+# Setup progetto
+
+## 1. Clona il frontend
+
+```bash
+git clone https://github.com/Damiana-Arangio/webapp-react.git
+cd webapp-react
+npm install
+npm run dev
