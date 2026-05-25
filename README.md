@@ -11,7 +11,7 @@ Backend repository:
 
 # 🎥 Demo
 
-![Demo Cineblox](./public/demo.gif)
+<img src="./public/demo.gif" alt="Demo Cineblox" width="1200">
 
 ## Responsive Design
 
@@ -56,10 +56,9 @@ Lo schema seguente mostra la struttura principale dell'applicazione: il Provider
 
 <img src="./public/imgs/Schema-App.png" alt="Schema applicazione" width="700">
 
-
 # Stack
 
-Frontend
+## Frontend
 - React
 - React Router DOM
 - Axios
@@ -67,13 +66,13 @@ Frontend
 - Bootstrap
 - CSS
 
-Backend
+## Backend
 - Node.js
 - Express.js
 - Multer
 - express-validator
 
-Database
+## Database
 - MySQL
 
 ---
@@ -83,7 +82,20 @@ Database
 ## 1. Clona il frontend
 
 ```bash
-git clone https://github.com/Damiana-Arangio/webapp-react.git
-cd webapp-react
+git clone https://github.com/Damiana-Arangio/cineblox-frontend.git
+cd cineblox-frontend
 npm install
+```
+
+## 2. Clona e avvia il backend
+
+Il frontend richiede il backend `cineblox-backend` in esecuzione.
+
+Repository backend:  
+[cineblox-backend](https://github.com/Damiana-Arangio/cineblox-backend)
+
+## 3. Avvia il frontend
+
+```bash
 npm run dev
+```
