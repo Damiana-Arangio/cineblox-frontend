@@ -5,18 +5,13 @@
 Il frontend comunica con un backend REST tramite chiamate AJAX.
 
 Backend repository:  
-[cineblox-backend ](https://github.com/Damiana-Arangio/webapp-express)
+[cineblox-backend ](https://github.com/Damiana-Arangio/cineblox-backend)
 
 ---
 
 # 🎥 Demo
 
-<video controls autoplay muted width="800">
-  <source src="./public/demo.mp4" type="video/mp4">
-</video>
-
-> ℹ️ La demo viene avviata automaticamente senza audio per permettere l’autoplay su GitHub.  
-> Per ascoltare anche l’audio, apri direttamente il file `public/demo.mp4`.
+![Demo Cineblox](./public/demo.gif)
 
 ## Responsive Design
 
