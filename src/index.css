@@ -396,7 +396,7 @@ ul {
     font-size: 0.85rem;
 }
 
-/** NewReviewForm */
+/** AddNewReview */
 
 /* ReviewCard */
 .review-card {
@@ -473,7 +473,7 @@ ul {
     background: linear-gradient(135deg, #ca8a04, #713f12);
 }
 
-/** NewMoviePage */
+/** AddNewMoviePage */
 .title-new-movie, .title-new-review{
     color: var(--color-primary-blue);
 }

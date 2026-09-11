@@ -16,13 +16,13 @@ Backend repository:
 ## Responsive Design
 
 ### Movies Page - Desktop
-![Movies Page](./public/imgs/Screenshot-MoviesPage-Desktop.png)
+![Movies Page](./public/imgs/Screenshot-AllMoviesPage-Desktop.png)
 
 ### Movies Page - Tablet
-![Movies Tablet](./public/imgs/Screenshot-MoviesPage-Tablet.png)
+![Movies Tablet](./public/imgs/Screenshot-AllMoviesPage-Tablet.png)
 
 ### Movies Page - Smartphone
-![Movies Smartphone](./public/imgs/Screenshot-MoviesPage-Mobile.png)
+![Movies Smartphone](./public/imgs/Screenshot-AllMoviesPage-Mobile.png)
 
 # Funzionalità principali
 

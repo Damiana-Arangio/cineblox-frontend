@@ -1,6 +1,6 @@
 import axios from "axios";
 import MovieCard from "../components/MovieCard.jsx";
-import useLoaderContext from "../hooks/useLoaderContext";  // Import Hook personalizzato per il contesto
+import useLoaderContext from "../hooks/useLoaderContext.js";  // Import Hook personalizzato per il contesto
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +13,7 @@ function Movies() {
 
     /* Hook di Stato */
     const [movies, setMovies] = useState([]);                               // Variabile di stato utilizzata per salvare i film ritornati dall'API
-    const [currentPage, setCurrentPage] = useState(1);                      // Variabile di che contiene la pagina corrente
+    const [currentPage, setCurrentPage] = useState(1);                      // Variabile di stato che contiene la pagina corrente
 
     /* Hook di Effetto */
     useEffect(() => {
@@ -21,7 +21,7 @@ function Movies() {
     }, []);
 
     /* Hook di Contesto */
-    const { setIsLoading } = useLoaderContext();                            /*  Destructuring della funzione setIsLoading dal LoaderContext
+    const { setIsLoading } = useLoaderContext();                            /*  Destructuring della funzione setIsLoading dal LoaderContext tramite useLoaderContext
                                                                                 (usata per attivare/disattivare il loader durante le chiamate API) */
 
     /**************************

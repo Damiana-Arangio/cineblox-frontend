@@ -1,6 +1,6 @@
 import axios from 'axios';
 import ReviewCard from '../components/ReviewCard.jsx';
-import NewReviewForm from '../components/NewReviewForm.jsx';
+import AddNewReview from '../components/AddNewReview.jsx';
 import useLoaderContext from "../hooks/useLoaderContext";  // Import Hook personalizzato per il contesto
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from 'react-router-dom';
@@ -9,7 +9,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-function MovieDetails() {
+function MovieDetailsPage() {
 
     /***********
          HOOK
@@ -102,7 +102,7 @@ function MovieDetails() {
 
                     {/* Form per aggiungere una nuova recensione */}
                     <div>
-                        <NewReviewForm 
+                        <AddNewReview 
                             idMovieDetails = {id}
                             reloadReviews = {fetchMovie}
                         />
@@ -110,7 +110,7 @@ function MovieDetails() {
                 </section>
             </div>
 
-            {/* Bottone che riporta alla Home */}
+            {/* Bottone che riporta alla pagina dei film */}
                 <div className='text-center m-5'>
                     <Link className="btn-main" to="/movies/"> 
                         <FontAwesomeIcon icon={faArrowLeft} className='px-2'/>
@@ -152,4 +152,4 @@ function MovieDetails() {
     }
 }
 
-export default MovieDetails;
+export default MovieDetailsPage;

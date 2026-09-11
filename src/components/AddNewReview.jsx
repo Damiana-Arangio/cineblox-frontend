@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-function NewReviewForm( {idMovieDetails, reloadReviews} ) {
+function AddNewReview( {idMovieDetails, reloadReviews} ) {
 
     /***************
         COSTANTI
@@ -151,4 +151,4 @@ function NewReviewForm( {idMovieDetails, reloadReviews} ) {
     }
 }
 
-export default NewReviewForm;
+export default AddNewReview;

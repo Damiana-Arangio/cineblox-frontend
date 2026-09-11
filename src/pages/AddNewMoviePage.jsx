@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 
-function NewMoviePage() {
+function AddNewMoviePage() {
 
     /***************
         COSTANTI
@@ -29,7 +29,7 @@ function NewMoviePage() {
     const [errors, setErrors] = useState({});                   // Variabile di stato che memorizza gli errori di validazione
     
     /* Hook di Navigazione */
-    const navigate = useNavigate();                             // Hook utilizzato per reindirizzare l'utente alla pagina HomePage
+    const navigate = useNavigate();                             // Hook utilizzato per reindirizzare l'utente alla pagina dei film
 
     /***************
         RENDERING
@@ -163,4 +163,4 @@ function NewMoviePage() {
     }
 }
 
-export default NewMoviePage;
+export default AddNewMoviePage;
